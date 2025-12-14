@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A calm space for mental relief, breathing exercises, and emotional release">
+    <title>Mental Relief - Find Your Calm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Find Your Calm</h1>
+            <p class="subtitle">A quiet space for you</p>
+        </header>
+
+        <!-- Breathing Section -->
+        <section class="breathing-section" aria-label="Guided breathing exercise">
+            <h2>Breathe With Me</h2>
+            <div class="breathing-container">
+                <div class="breathing-circle" aria-live="polite" aria-atomic="true">
+                    <span class="breathing-text">Breathe</span>
+                </div>
+            </div>
+            <div class="breathing-controls">
+                <button id="breathingToggle" class="btn btn-primary" aria-pressed="false">
+                    Start Breathing
+                </button>
+                <p class="breathing-instruction">Follow the circle</p>
+            </div>
+        </section>
+
+        <!-- Anger Release Section -->
+        <section class="release-section" aria-label="Emotional release space">
+            <h2>Release What's Heavy</h2>
+            <p class="description">Write down what's bothering you. Let it go.</p>
+            <div class="textarea-container">
+                <textarea 
+                    id="releaseText" 
+                    placeholder="I feel..."
+                    aria-label="Write your thoughts here"
+                    maxlength="1000"
+                ></textarea>
+                <div class="textarea-actions">
+                    <button id="clearText" class="btn btn-secondary">
+                        Clear & Release
+                    </button>
+                    <span class="char-count" aria-live="polite">0 / 1000</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Positive Affirmations Section -->
+        <section class="affirmation-section" aria-label="Positive affirmations">
+            <h2>Positive Affirmations</h2>
+            <p class="description">Create your collection of uplifting thoughts</p>
+            
+            <div class="affirmation-input-container">
+                <input 
+                    type="text" 
+                    id="affirmationInput" 
+                    placeholder="I am calm and at peace..."
+                    aria-label="Enter positive affirmation"
+                    maxlength="150"
+                />
+                <button id="addAffirmation" class="btn btn-add" aria-label="Add affirmation">
+                    + Add
+                </button>
+            </div>
+            
+            <div class="affirmations-list" id="affirmationsList" role="list">
+                <!-- Affirmations will be added here dynamically -->
+            </div>
+            
+            <p class="affirmation-hint">Press Enter to quickly add an affirmation</p>
+        </section>
+
+        <!-- Gratitude Journal Section -->
+        <section class="gratitude-section" aria-label="Daily gratitude journal">
+            <h2>Today I'm Grateful For...</h2>
+            <p class="description">Write three things you appreciate today</p>
+            
+            <div class="gratitude-date">
+                <span class="date-icon">📅</span>
+                <span id="gratitudeDate"></span>
+            </div>
+            
+            <div class="gratitude-inputs">
+                <div class="gratitude-input-group">
+                    <label for="gratitude1" class="gratitude-number">1</label>
+                    <input 
+                        type="text" 
+                        id="gratitude1" 
+                        class="gratitude-input"
+                        placeholder="Something that made you smile..."
+                        aria-label="First thing you're grateful for"
+                        maxlength="200"
+                    />
+                </div>
+                
+                <div class="gratitude-input-group">
+                    <label for="gratitude2" class="gratitude-number">2</label>
+                    <input 
+                        type="text" 
+                        id="gratitude2" 
+                        class="gratitude-input"
+                        placeholder="A person who helped you..."
+                        aria-label="Second thing you're grateful for"
+                        maxlength="200"
+                    />
+                </div>
+                
+                <div class="gratitude-input-group">
+                    <label for="gratitude3" class="gratitude-number">3</label>
+                    <input 
+                        type="text" 
+                        id="gratitude3" 
+                        class="gratitude-input"
+                        placeholder="Something beautiful you noticed..."
+                        aria-label="Third thing you're grateful for"
+                        maxlength="200"
+                    />
+                </div>
+            </div>
+            
+            <button id="saveGratitude" class="btn btn-gratitude">
+                💝 Save Today's Gratitude
+            </button>
+            
+            <div class="gratitude-history">
+                <h3>Recent Reflections</h3>
+                <div id="gratitudeHistory" class="gratitude-entries">
+                    <!-- Previous gratitude entries will appear here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sound Section -->
+        <section class="sound-section" aria-label="Calming background sounds">
+            <h2>Calming Sounds</h2>
+            <div class="sound-grid">
+                <button class="sound-btn" data-sound="rain" aria-pressed="false">
+                    <span class="sound-icon">🌧️</span>
+                    <span class="sound-label">Rain</span>
+                </button>
+                <button class="sound-btn" data-sound="ocean" aria-pressed="false">
+                    <span class="sound-icon">🌊</span>
+                    <span class="sound-label">Ocean</span>
+                </button>
+                <button class="sound-btn" data-sound="forest" aria-pressed="false">
+                    <span class="sound-icon">🌲</span>
+                    <span class="sound-label">Forest</span>
+                </button>
+                <button class="sound-btn" data-sound="wind" aria-pressed="false">
+                    <span class="sound-icon">💨</span>
+                    <span class="sound-label">Wind</span>
+                </button>
+            </div>
+            <p class="sound-note">Sounds are simulated for demonstration</p>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p class="disclaimer">This is a tool for relaxation and emotional comfort, not a substitute for professional mental health care.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
